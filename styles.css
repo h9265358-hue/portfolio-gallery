@@ -150,9 +150,9 @@ a { color: inherit; text-decoration: none; }
 /* 5. Concept Illustration */
 .project:nth-child(5) img { object-position: 50% 50%; }
 /* 6. Isometric */
-.project:nth-child(7) img { object-position: 50% 10%; }
+.project:nth-child(7) img { object-position: 50% 0%; }
 /* 7. Yingge Dance */
-.project:nth-child(6) img { object-position: 46% 50%; }
+.project:nth-child(6) img { object-position: 48% 50%; }
 /* 8. Blue Boy */
 .project:nth-child(8) img { object-position: 50% 20%; }
 /* 9. Lemur */
@@ -160,7 +160,7 @@ a { color: inherit; text-decoration: none; }
 /* 10. Girl and Cat */
 .project:nth-child(10) img { object-position: 50% 60%; }
 /* 11. Haven Orange Milk Chocolate */
-.project:nth-child(11) img { object-position: 50% 85%; }
+.project:nth-child(11) img { object-position: 50% 83%; }
 /* 12. Masks */
 .project:nth-child(12) img { object-position: 50% 40%; }
 /* 13. Corpse Driving */
@@ -170,13 +170,13 @@ a { color: inherit; text-decoration: none; }
 /* 15. Space Conveyor */
 .project:nth-child(15) img { object-position: 50% 50%; }
 /* 16. White Snake */
-.project:nth-child(16) img { object-position: 50% 40%; }
+.project:nth-child(16) img { object-position: 50% 35%; }
 /* 17. Picnic */
 .project:nth-child(17) img { object-position: 0% 50%; }
 /* 18. Woody Guthrie */
 .project:nth-child(18) img { object-position: 50% 50%; }
 /* 19. Dragon Etching */
-.project:nth-child(19) img { object-position: 50% 50%; }
+.project:nth-child(19) img { object-position: 50% 45%; }
 /* 20. Fox Spirit */
 .project:nth-child(20) img { object-position: 50% 50%; }
 
