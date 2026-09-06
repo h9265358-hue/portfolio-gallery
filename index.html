@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Annie Koo illustration portfolio">
+  <title>Annie Koo — Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="#illustration">Annie Koo</a>
+
+  <nav class="nav" aria-label="Main navigation">
+    <a class="active" href="#illustration">Illustration</a>
+    <a href="#design">Design</a>
+    <a href="#books">Books</a>
+    <a href="#contact">Contact</a>
+
+    <a class="social linkedin" href="#" aria-label="LinkedIn">
+      <span aria-hidden="true">in</span>
+    </a>
+
+    <a class="social instagram" href="#" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3.2" y="3.2" width="17.6" height="17.6" rx="4.5"
+              fill="none" stroke="currentColor" stroke-width="1.9"/>
+        <circle cx="12" cy="12" r="4.1"
+                fill="none" stroke="currentColor" stroke-width="1.9"/>
+        <circle cx="17.4" cy="6.8" r="1.15" fill="currentColor"/>
+      </svg>
+    </a>
+  </nav>
+</header>
+
+<main>
+  <section id="illustration" class="work" aria-label="Illustration portfolio">
+    <div class="gallery">
+
+      <button class="project" type="button"
+              data-full="assets/summer-reading.jpg"
+              data-title="Summer Reading"
+              aria-label="View Summer Reading">
+        <img src="assets/summer-reading.jpg" alt="Summer Reading">
+      </button>
+
+      <button class="project" type="button"
+              data-full="assets/the-swing.png"
+              data-title="The Swing"
+              aria-label="View The Swing">
+        <img src="assets/the-swing.png" alt="The Swing">
+      </button>
+
+      <button class="project" type="button"
+              data-full="assets/daji.png"
+              data-title="Daji"
+              aria-label="View Daji">
+        <img src="assets/daji.png" alt="Daji">
+      </button>
+
+      <button class="project" type="button"
+              data-full="assets/shadow-puppet.png"
+              data-title="Shadow Puppet"
+              aria-label="View Shadow Puppet">
+        <img src="assets/shadow-puppet.png" alt="Shadow Puppet">
+      </button>
+
+    </div>
+  </section>
+
+  <section id="design" class="placeholder-section">
+    <h2>Design</h2>
+    <p>Add your design work here later.</p>
+  </section>
+
+  <section id="books" class="placeholder-section">
+    <h2>Books</h2>
+    <p>Add your book work here later.</p>
+  </section>
+
+  <section id="contact" class="placeholder-section contact-section">
+    <h2>Contact</h2>
+    <p><a href="mailto:you@example.com">you@example.com</a></p>
+  </section>
+</main>
+
+<footer>
+  © <span id="year"></span> Annie Koo
+</footer>
+
+<div class="viewer" id="viewer" aria-hidden="true">
+  <button class="viewer-close" id="viewerClose" type="button" aria-label="Close">×</button>
+  <button class="viewer-arrow viewer-prev" id="viewerPrev" type="button" aria-label="Previous image">‹</button>
+
+  <figure class="viewer-figure">
+    <img id="viewerImage" src="" alt="">
+    <figcaption id="viewerCaption"></figcaption>
+  </figure>
+
+  <button class="viewer-arrow viewer-next" id="viewerNext" type="button" aria-label="Next image">›</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
