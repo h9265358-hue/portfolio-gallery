@@ -26,8 +26,8 @@ a { color: inherit; text-decoration: none; }
 
 /* Header: brand and nav share the same bottom alignment */
 .site-header {
-  min-height: 150px;
-  padding: 30px var(--page-pad-x) 24px;
+  min-height: 85px;
+  padding: 15px var(--page-pad-x) 18px;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
