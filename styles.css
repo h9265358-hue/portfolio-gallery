@@ -140,21 +140,21 @@ a { color: inherit; text-decoration: none; }
 /* Individual square-crop positioning */
 /* Individual thumbnail crop controls — edit either percentage to reposition */
 /* 1. Summer Reading */
-.project:nth-child(1) img { object-position: 50% 80%; }
+.project:nth-child(1) img { object-position: 50% 85%; }
 /* 2. The Swing */
 .project:nth-child(2) img { object-position: 50% 50%; }
 /* 3. Daji */
 .project:nth-child(3) img { object-position: 50% 5%; }
 /* 4. Shadow Puppet */
-.project:nth-child(4) img { object-position: 47% 50%; }
+.project:nth-child(4) img { object-position: 49% 50%; }
 /* 5. Concept Illustration */
 .project:nth-child(5) img { object-position: 50% 50%; }
 /* 6. Yingge Dance */
 .project:nth-child(6) img { object-position: 46% 50%; }
 /* 7. Isometric */
-.project:nth-child(7) img { object-position: 50% 20%; }
+.project:nth-child(7) img { object-position: 50% 10%; }
 /* 8. Blue Boy */
-.project:nth-child(8) img { object-position: 50% 75%; }
+.project:nth-child(8) img { object-position: 50% 25%; }
 /* 9. Lemur */
 .project:nth-child(9) img { object-position: 50% 50%; }
 /* 10. Girl and Cat */
