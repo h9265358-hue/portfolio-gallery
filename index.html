@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Portfolio Gallery</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #fff; }
+  body { font-family: Arial, Helvetica, sans-serif; overflow-x: hidden; }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    width: 100%;
+  }
+
+  .tile {
+    appearance: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background: none;
+    cursor: zoom-in;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+  }
+
+  .tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform .18s ease;
+  }
+
+  .tile:hover img { transform: scale(1.015); }
+
+  .viewer {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,.98);
+    z-index: 9999;
+    padding: 28px;
+    cursor: zoom-out;
+  }
+
+  .viewer.open { display: flex; }
+
+  .viewer img {
+    max-width: 96vw;
+    max-height: 92vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  .close {
+    position: fixed;
+    top: 14px;
+    right: 18px;
+    border: 0;
+    background: transparent;
+    font-size: 38px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 6px 10px;
+  }
+
+  @media (max-width: 800px) {
+    .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  @media (max-width: 480px) {
+    .gallery { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="gallery">
+    <button class="tile" type="button" data-full="summer-reading.jpg" aria-label="View Summer Reading">
+      <img src="summer-reading.jpg" alt="Summer Reading">
+    </button>
+    <button class="tile" type="button" data-full="the-swing.png" aria-label="View The Swing">
+      <img src="the-swing.png" alt="The Swing">
+    </button>
+    <button class="tile" type="button" data-full="daji.png" aria-label="View Daji">
+      <img src="daji.png" alt="Daji">
+    </button>
+    <button class="tile" type="button" data-full="shadow-puppet.png" aria-label="View Shadow Puppet">
+      <img src="shadow-puppet.png" alt="Shadow Puppet">
+    </button>
+</div>
+
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-label="Full image">
+  <button class="close" id="close" aria-label="Close">&times;</button>
+  <img id="viewerImage" alt="">
+</div>
+
+<script>
+  const viewer = document.getElementById('viewer');
+  const viewerImage = document.getElementById('viewerImage');
+  const closeButton = document.getElementById('close');
+
+  document.querySelectorAll('.tile').forEach(tile => {
+    tile.addEventListener('click', () => {
+      const img = tile.querySelector('img');
+      viewerImage.src = tile.dataset.full;
+      viewerImage.alt = img.alt;
+      viewer.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeViewer() {
+    viewer.classList.remove('open');
+    viewerImage.src = '';
+    document.body.style.overflow = '';
+  }
+
+  closeButton.addEventListener('click', (e) => {
+    e.stopPropagation();
+    closeViewer();
+  });
+
+  viewer.addEventListener('click', (e) => {
+    if (e.target === viewer || e.target === viewerImage) closeViewer();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeViewer();
+  });
+</script>
+
+</body>
+</html>
