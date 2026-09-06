@@ -365,7 +365,7 @@ body.page-leaving {
   .site-header {
     min-height: 150px;
     padding: 34px 28px 0;
-    margin-bottom: 45px;
+    margin-bottom: 25px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -452,7 +452,7 @@ body.page-leaving {
     gap: 64px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
-    font-size: 28px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1;
   }
@@ -476,23 +476,23 @@ body.page-leaving {
   }
 
   .mobile-menu-social .linkedin {
-    font-size: 46px;
+    font-size: 30px;
     font-weight: 500;
     letter-spacing: -.06em;
     line-height: 1;
   }
 
   .mobile-menu-social .instagram {
-    width: 46px;
-    height: 46px;
+    width: 30px;
+    height: 30px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
   }
 
   .mobile-menu-social .instagram svg {
-    width: 42px;
-    height: 42px;
+    width: 30px;
+    height: 30px;
     display: block;
   }
 
