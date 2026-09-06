@@ -59,9 +59,9 @@ a {
   margin-left: auto;
   display: flex;
   align-items: center;
-  gap: 36px;
+  gap: 28px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: clamp(17px, 1.45vw, 27px);
+  font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
   white-space: nowrap;
