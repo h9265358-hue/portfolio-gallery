@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Champagne";
+  src: url("fonts/ChampagneAndLimousines-7KRB.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Thomas-inspired minimalist portfolio.
    Edit the variables below if you want to tune spacing or thumbnail shape. */
 
@@ -46,7 +54,7 @@ a {
 
 .brand {
   flex: 0 0 auto;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Champagne", sans-serif;
   font-size: clamp(48px, 5.15vw, 78px);
   line-height: .95;
   font-weight: 300;
@@ -59,9 +67,9 @@ a {
   margin-left: auto;
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 25px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 9px;
   font-weight: 600;
   text-transform: uppercase;
   white-space: nowrap;
