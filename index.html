@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Illustration — Annie Koo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-enter">
+<header class="site-header">
+  <a class="brand" href="illustration.html">Annie Koo</a>
+
+  <nav class="nav" aria-label="Main navigation">
+    <a class="active" href="illustration.html">Illustration</a>
+    <a class="" href="design.html">Design</a>
+    <a class="" href="books.html">Books</a>
+    <a class="" href="contact.html">Contact</a>
+
+    <a class="social linkedin" href="https://www.linkedin.com/in/annie-koo-587b91424" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
+    <a class="social instagram" href="#" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3.2" y="3.2" width="17.6" height="17.6" rx="4.5"
+              fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <circle cx="12" cy="12" r="4.1"
+                fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <circle cx="17.4" cy="6.8" r="1.05" fill="currentColor"/>
+      </svg>
+    </a>
+  </nav>
+</header>
+<main>
+  <section class="work" aria-label="Illustration portfolio">
+    <div class="gallery">
+      <button class="project" type="button" data-full="assets/summer-reading.jpg" data-title="Summer Reading">
+        <img src="assets/summer-reading.jpg" alt="Summer Reading">
+      </button>
+      <button class="project" type="button" data-full="assets/the-swing.png" data-title="The Swing">
+        <img src="assets/the-swing.png" alt="The Swing">
+      </button>
+      <button class="project" type="button" data-full="assets/daji.png" data-title="Daji">
+        <img src="assets/daji.png" alt="Daji">
+      </button>
+      <button class="project" type="button" data-full="assets/shadow-puppet.png" data-title="Shadow Puppet">
+        <img src="assets/shadow-puppet.png" alt="Shadow Puppet">
+      </button>
+    </div>
+  </section>
+
+  <div class="viewer" id="viewer" aria-hidden="true">
+    <button class="viewer-close" id="viewerClose" type="button" aria-label="Close">×</button>
+    <button class="viewer-arrow viewer-prev" id="viewerPrev" type="button" aria-label="Previous image">‹</button>
+    <figure class="viewer-figure">
+      <img id="viewerImage" src="" alt="">
+      <figcaption id="viewerCaption"></figcaption>
+    </figure>
+    <button class="viewer-arrow viewer-next" id="viewerNext" type="button" aria-label="Next image">›</button>
+  </div>
+</main>
+<footer>© <span id="year"></span> Annie Koo</footer>
+<script src="script.js"></script>
+</body>
+</html>
