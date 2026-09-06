@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Design — Annie Koo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="illustration.html">Annie Koo</a>
+
+  <nav class="nav" aria-label="Main navigation">
+    <a href="illustration.html">Illustration</a>
+    <a class="active" href="design.html">Design</a>
+    <a href="books.html">Books</a>
+    <a href="contact.html">Contact</a>
+
+    <a class="social linkedin" href="https://www.linkedin.com/in/annie-koo-587b91424" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
+    <a class="social instagram" href="#" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3.2" y="3.2" width="17.6" height="17.6" rx="4.5"
+              fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <circle cx="12" cy="12" r="4.1"
+                fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <circle cx="17.4" cy="6.8" r="1.05" fill="currentColor"/>
+      </svg>
+    </a>
+  </nav>
+</header>
+
+<main>
+  <section class="design-page" aria-label="Design portfolio">
+    <div class="design-slider" data-slider aria-roledescription="carousel" aria-label="Design project images">
+      <button class="design-slider-arrow design-slider-prev" type="button" aria-label="Previous image">‹</button>
+
+      <div class="design-slider-viewport">
+        <div class="design-slide is-active" data-slide aria-hidden="false">
+          <img src="assets/dm-logo-final.jpeg" alt="DM logo final design">
+        </div>
+        <div class="design-slide" data-slide aria-hidden="true">
+          <img src="assets/dm-logo-sketches.jpeg" alt="DM logo development sketches">
+        </div>
+      </div>
+
+      <button class="design-slider-arrow design-slider-next" type="button" aria-label="Next image">›</button>
+
+      <div class="design-slider-dots" aria-label="Choose slide">
+        <button class="design-slider-dot is-active" type="button" aria-label="Show slide 1" aria-current="true"></button>
+        <button class="design-slider-dot" type="button" aria-label="Show slide 2" aria-current="false"></button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>© <span id="year"></span> Annie Koo</footer>
+<script src="script.js"></script>
+</body>
+</html>
