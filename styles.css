@@ -784,3 +784,14 @@ body.page-leaving {
   .design-slider-swipe .design-slider-prev { left: 0; }
   .design-slider-swipe .design-slider-next { right: 0; }
 }
+
+/* Majestic slider: reserve space below the image for navigation dots */
+.design-slider-wide {
+  padding-bottom: 46px;
+}
+
+@media (max-width: 760px) {
+  .design-slider-wide {
+    padding-bottom: 42px;
+  }
+}
