@@ -729,3 +729,58 @@ body.page-leaving {
     height: 9px;
   }
 }
+
+/* ---------- Majestic magazine swipe slider ---------- */
+.design-slider-wide {
+  width: min(100%, 1200px);
+  margin: 82px auto 0;
+  padding-bottom: 0;
+}
+
+.design-slider-swipe .design-slider-viewport {
+  aspect-ratio: 16 / 10;
+}
+
+.design-slider-swipe .design-slide-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transform: translateX(0);
+  transition: transform .38s ease;
+  will-change: transform;
+}
+
+.design-slider-swipe .design-slide {
+  position: relative;
+  inset: auto;
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: none;
+}
+
+.design-slider-swipe .design-slide img {
+  object-fit: contain;
+}
+
+.design-slider-swipe .design-slider-arrow {
+  top: 50%;
+}
+
+@media (max-width: 760px) {
+  .design-slider-wide {
+    margin-top: 68px;
+    padding-left: 52px;
+    padding-right: 52px;
+  }
+
+  .design-slider-swipe .design-slider-viewport {
+    aspect-ratio: 4 / 3;
+  }
+
+  .design-slider-swipe .design-slider-prev { left: 0; }
+  .design-slider-swipe .design-slider-next { right: 0; }
+}

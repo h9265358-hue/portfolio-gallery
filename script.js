@@ -202,6 +202,8 @@ designSliders.forEach((designSlider) => {
   const prev = designSlider.querySelector('.design-slider-prev');
   const next = designSlider.querySelector('.design-slider-next');
   const viewport = designSlider.querySelector('.design-slider-viewport');
+  const track = designSlider.querySelector('.design-slide-track');
+  const slideMode = designSlider.dataset.sliderMode === 'slide';
   let currentSlide = 0;
   let touchStartX = null;
 
@@ -210,11 +212,18 @@ designSliders.forEach((designSlider) => {
   function showSlide(index) {
     currentSlide = (index + slides.length) % slides.length;
 
-    slides.forEach((slide, i) => {
-      const active = i === currentSlide;
-      slide.classList.toggle('is-active', active);
-      slide.setAttribute('aria-hidden', active ? 'false' : 'true');
-    });
+    if (slideMode && track) {
+      track.style.transform = `translateX(-${currentSlide * 100}%)`;
+      slides.forEach((slide, i) => {
+        slide.setAttribute('aria-hidden', i === currentSlide ? 'false' : 'true');
+      });
+    } else {
+      slides.forEach((slide, i) => {
+        const active = i === currentSlide;
+        slide.classList.toggle('is-active', active);
+        slide.setAttribute('aria-hidden', active ? 'false' : 'true');
+      });
+    }
 
     dots.forEach((dot, i) => {
       const active = i === currentSlide;
