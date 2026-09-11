@@ -974,3 +974,25 @@ body.page-leaving {
     padding-bottom: 0;
   }
 }
+
+
+/* ---------- FINAL desktop flyer-slider spacing correction ---------- */
+@media (min-width: 761px) {
+  /* Pull the flyer slider upward to visually match the spacing between
+     the Magazine and Specimen sliders. */
+  .psyched-slider:not(.psyched-slider-mobile) {
+    margin-top: 30px !important;
+    padding-bottom: 26px !important;
+  }
+
+  /* Remove the extra vertical inset around the flyer artwork. */
+  .psyched-slider:not(.psyched-slider-mobile) .psyched-slide-page {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* Bring the flyer navigation dots closer to the artwork. */
+  .psyched-slider:not(.psyched-slider-mobile) .design-slider-dots {
+    bottom: 0 !important;
+  }
+}
