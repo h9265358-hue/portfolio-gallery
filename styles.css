@@ -28,7 +28,7 @@ a { color: inherit; text-decoration: none; }
 .site-header {
   min-height: 63.75px;
   padding: 15px 40px 0;
-  margin-bottom: 100px;
+  margin-bottom: 200px;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -400,7 +400,7 @@ body.page-leaving {
   .site-header {
     min-height: 0;
     padding: 25.5px 28px 0;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
