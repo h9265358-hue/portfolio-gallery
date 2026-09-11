@@ -879,3 +879,31 @@ body.page-leaving {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+/* ---------- Psyched to Move: mobile one-image slider ---------- */
+.psyched-slider-mobile {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  /* Keep the existing grouped 3-up / 2-up Psyched slider exactly as-is on desktop,
+     but replace it with a one-image-per-slide version on mobile. */
+  .psyched-slider:not(.psyched-slider-mobile) {
+    display: none;
+  }
+
+  .psyched-slider-mobile {
+    display: block;
+    margin-top: 68px;
+  }
+
+  .psyched-slider-mobile .design-slider-viewport {
+    aspect-ratio: 4 / 5;
+  }
+
+  .psyched-slider-mobile .design-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
