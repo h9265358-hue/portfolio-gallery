@@ -962,3 +962,15 @@ body.page-leaving {
     padding: 14px 28px;
   }
 }
+
+/* ---------- Flyer slider desktop spacing adjustment ---------- */
+@media (min-width: 761px) {
+  .psyched-slider:not(.psyched-slider-mobile) {
+    margin-top: 76px;
+  }
+
+  .psyched-slider:not(.psyched-slider-mobile) .psyched-slide-page {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
