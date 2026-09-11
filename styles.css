@@ -914,7 +914,7 @@ body.page-leaving {
   position: sticky;
   top: 0;
   z-index: 1200;
-  background: rgba(255,255,255,.97);
+  background: #fff;
   transition: min-height .22s ease, padding .22s ease, box-shadow .22s ease, background .22s ease;
 }
 
@@ -922,7 +922,7 @@ body.page-leaving {
   min-height: 56px;
   padding-top: 10px;
   padding-bottom: 20px;
-  background: rgba(255,255,255,.985);
+  background: #fff;
   box-shadow: 0 1px 0 rgba(0,0,0,.07);
 }
 
