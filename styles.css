@@ -898,7 +898,8 @@ body.page-leaving {
   }
 
   .psyched-slider-mobile .design-slider-viewport {
-    aspect-ratio: 4 / 5;
+    /* Match the mobile height used by the Majestic and Specimen Guide sliders. */
+    aspect-ratio: 4 / 3;
   }
 
   .psyched-slider-mobile .design-slide img {
