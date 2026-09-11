@@ -907,3 +907,57 @@ body.page-leaving {
     object-fit: contain;
   }
 }
+
+/* ---------- Sticky navigation + desktop slider fit update ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1200;
+  background: rgba(255,255,255,.97);
+  transition: min-height .22s ease, padding .22s ease, box-shadow .22s ease, background .22s ease;
+}
+
+.site-header.is-scrolled {
+  min-height: 56px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: rgba(255,255,255,.985);
+  box-shadow: 0 1px 0 rgba(0,0,0,.07);
+}
+
+.site-header.is-scrolled .brand,
+.site-header.is-scrolled .nav {
+  transition: transform .22s ease;
+}
+
+@media (min-width: 761px) {
+  /* Keep full slider images visible beneath the sticky header on desktop. */
+  .design-slider-grid {
+    width: min(90%, 1280px);
+  }
+
+  .design-slider-grid .design-slider-viewport {
+    max-height: calc(100vh - 190px);
+  }
+
+  .design-slider-wide {
+    width: min(86%, 940px);
+  }
+
+  .design-slider-wide .design-slider-viewport {
+    max-height: calc(100vh - 190px);
+  }
+
+  .design-slider-wide .design-slide img,
+  .design-slider-grid .design-slide img {
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 760px) {
+  /* Preserve the existing mobile layout while making the header sticky. */
+  .site-header.is-scrolled {
+    min-height: 0;
+    padding: 14px 28px;
+  }
+}

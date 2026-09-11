@@ -260,3 +260,14 @@ designSliders.forEach((designSlider) => {
 
   showSlide(0);
 });
+
+/* ---------- Sticky header behavior ---------- */
+const stickyHeader = document.querySelector('.site-header');
+if (stickyHeader) {
+  const updateStickyHeader = () => {
+    stickyHeader.classList.toggle('is-scrolled', window.scrollY > 24);
+  };
+
+  updateStickyHeader();
+  window.addEventListener('scroll', updateStickyHeader, { passive: true });
+}
