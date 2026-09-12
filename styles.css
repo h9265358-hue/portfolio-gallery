@@ -1138,3 +1138,18 @@ body.page-leaving {
     gap: 10px;
   }
 }
+
+
+/* ---------- Remove slider focus outline + mobile hamburger position ---------- */
+.design-slider:focus,
+.design-slider:focus-visible,
+.design-slider-viewport:focus,
+.design-slider-viewport:focus-visible {
+  outline: none;
+}
+
+@media (max-width: 760px) {
+  .mobile-menu-toggle {
+    transform: translateY(2px);
+  }
+}
