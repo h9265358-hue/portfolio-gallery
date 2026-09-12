@@ -1097,3 +1097,39 @@ body.page-leaving {
     cursor: zoom-in;
   }
 }
+
+/* ---------- Books: RED finished-book photo row ---------- */
+.book-photo-row {
+  width: min(92%, 1080px);
+  margin: 44px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.book-photo {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  cursor: zoom-in;
+  overflow: hidden;
+}
+
+.book-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 760px) {
+  .book-photo-row {
+    /* Match the mobile slider's full outer width, including the arrow gutters. */
+    width: 100%;
+    margin-top: 34px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+}
