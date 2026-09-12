@@ -1118,9 +1118,14 @@ body.page-leaving {
   overflow: hidden;
 }
 
+.book-photo {
+  aspect-ratio: 4 / 3;
+}
+
 .book-photo img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
