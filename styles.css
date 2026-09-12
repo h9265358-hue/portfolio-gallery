@@ -1170,15 +1170,28 @@ body.page-leaving {
   overflow-x: auto;
   overflow-y: hidden;
   background: #fff;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  scrollbar-width: auto;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
   cursor: grab;
 }
 
 .book-panorama-viewport::-webkit-scrollbar {
-  display: none;
+  height: 12px;
+}
+
+.book-panorama-viewport::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.book-panorama-viewport::-webkit-scrollbar-thumb {
+  background: #b8b8b8;
+  border-radius: 999px;
+  border: 3px solid #f1f1f1;
+}
+
+.book-panorama-viewport::-webkit-scrollbar-thumb:hover {
+  background: #8f8f8f;
 }
 
 .book-panorama-viewport.is-dragging {
@@ -1221,4 +1234,11 @@ body.page-leaving {
 
   .book-panorama .design-slider-prev { left: 0; }
   .book-panorama .design-slider-next { right: 0; }
+}
+
+
+/* Panorama scrollbar visibility */
+.book-panorama-viewport {
+  overflow-x: scroll;
+  padding-bottom: 2px;
 }
