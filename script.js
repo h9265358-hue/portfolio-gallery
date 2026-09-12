@@ -313,10 +313,12 @@ document.querySelectorAll('[data-panorama]').forEach((panorama) => {
   let dragging = false;
   let startX = 0;
   let startScrollLeft = 0;
+  let movedDuringDrag = false;
 
   viewport.addEventListener('pointerdown', (event) => {
     if (event.pointerType !== 'mouse' || event.button !== 0) return;
     dragging = true;
+    movedDuringDrag = false;
     startX = event.clientX;
     startScrollLeft = viewport.scrollLeft;
     viewport.classList.add('is-dragging');
@@ -325,8 +327,18 @@ document.querySelectorAll('[data-panorama]').forEach((panorama) => {
 
   viewport.addEventListener('pointermove', (event) => {
     if (!dragging) return;
-    viewport.scrollLeft = startScrollLeft - (event.clientX - startX);
+    const distance = event.clientX - startX;
+    if (Math.abs(distance) > 6) movedDuringDrag = true;
+    viewport.scrollLeft = startScrollLeft - distance;
   });
+
+  const panoramaZoom = viewport.querySelector('.book-panorama-zoom');
+  panoramaZoom?.addEventListener('click', (event) => {
+    if (!movedDuringDrag) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    movedDuringDrag = false;
+  }, true);
 
   const stopDragging = (event) => {
     if (!dragging) return;
@@ -335,6 +347,9 @@ document.querySelectorAll('[data-panorama]').forEach((panorama) => {
     if (event.pointerId !== undefined && viewport.hasPointerCapture(event.pointerId)) {
       viewport.releasePointerCapture(event.pointerId);
     }
+    window.setTimeout(() => {
+      movedDuringDrag = false;
+    }, 0);
   };
 
   viewport.addEventListener('pointerup', stopDragging);

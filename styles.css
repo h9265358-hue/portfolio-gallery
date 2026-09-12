@@ -1242,3 +1242,34 @@ body.page-leaving {
   overflow-x: scroll;
   padding-bottom: 2px;
 }
+
+
+/* ---------- Books panorama: zoom/lightbox trigger ---------- */
+.book-panorama-zoom.project {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: max-content;
+  height: 100%;
+  aspect-ratio: auto;
+  display: block;
+  overflow: visible;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.book-panorama-zoom.project img {
+  width: auto;
+  max-width: none;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transform: none;
+  opacity: 1;
+}
+
+.book-panorama-zoom.project:hover img {
+  transform: none;
+  opacity: 1;
+}
