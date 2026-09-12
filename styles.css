@@ -1101,7 +1101,7 @@ body.page-leaving {
 /* ---------- Books: RED finished-book photo row ---------- */
 .book-photo-row {
   width: min(92%, 1080px);
-  margin: 22px auto 0;
+  margin: 44px auto 0;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;
@@ -1133,7 +1133,7 @@ body.page-leaving {
   .book-photo-row {
     /* Match the mobile slider's full outer width, including the arrow gutters. */
     width: 100%;
-    margin-top: 17px;
+    margin-top: 34px;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
   }
