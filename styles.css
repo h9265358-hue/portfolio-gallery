@@ -222,11 +222,11 @@ footer {
 .viewer {
   position: fixed;
   inset: 0;
-  z-index: 1000;
+  z-index: 2000;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255,255,255,.92);
+  background: rgba(255,255,255,.90);
   padding: 28px 64px 50px;
   opacity: 0;
   visibility: hidden;
@@ -280,7 +280,7 @@ footer {
   color: #111;
   cursor: pointer;
   position: fixed;
-  z-index: 1001;
+  z-index: 2001;
   font-weight: 300;
 }
 
