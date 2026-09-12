@@ -1173,7 +1173,6 @@ body.page-leaving {
   scrollbar-width: auto;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
-  cursor: grab;
 }
 
 .book-panorama-viewport::-webkit-scrollbar {
@@ -1194,11 +1193,6 @@ body.page-leaving {
   background: #8f8f8f;
 }
 
-.book-panorama-viewport.is-dragging {
-  cursor: grabbing;
-  scroll-behavior: auto;
-  user-select: none;
-}
 
 .book-panorama-viewport img {
   display: block;
