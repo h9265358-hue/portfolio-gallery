@@ -174,7 +174,14 @@ if (projects.length && viewer) {
   }
 
   projects.forEach((project, index) => {
-    project.addEventListener('click', () => showProject(index));
+    project.addEventListener('click', () => {
+      // Book-slider lightbox is mobile-only; illustration gallery items
+      // continue to open the viewer at every viewport size.
+      if (project.classList.contains('book-zoom') && !window.matchMedia('(max-width: 760px)').matches) {
+        return;
+      }
+      showProject(index);
+    });
   });
 
   closeButton.addEventListener('click', closeViewer);

@@ -1065,3 +1065,35 @@ body.page-leaving {
     aspect-ratio: 4 / 3;
   }
 }
+
+/* ---------- Books: desktop/mobile interaction refinements ---------- */
+@media (min-width: 761px) {
+  /* Desktop matches the specimen slider: the slide itself is not a zoom trigger. */
+  .book-slider .book-zoom {
+    cursor: default;
+  }
+}
+
+@media (max-width: 760px) {
+  /* The long row of dots is unnecessary on phones. Removing its reserved space
+     also centers the arrows against the visible image area. */
+  .book-slider {
+    padding-bottom: 0;
+  }
+
+  .book-slider .design-slider-dots {
+    display: none;
+  }
+
+  .book-slider .design-slider-arrow {
+    top: 50%;
+  }
+
+  /* Keep a little breathing room above the artwork while retaining the
+     same 4:3 viewport and full-image contain behavior. */
+  .book-slider .book-zoom {
+    padding-top: 10px;
+    box-sizing: border-box;
+    cursor: zoom-in;
+  }
+}
