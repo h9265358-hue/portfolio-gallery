@@ -1004,6 +1004,7 @@ body.page-leaving {
   .nav .linkedin {
     font-size: 21px;
     line-height: .82;
+    transform: translateY(-2px);
   }
 
   .nav .instagram {
