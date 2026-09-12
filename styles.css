@@ -990,3 +990,29 @@ body.page-leaving {
     padding: 0 8px;
   }
 }
+
+
+/* ---------- Desktop social icon sizing/alignment ---------- */
+@media (min-width: 761px) {
+  .nav .social {
+    width: 21px;
+    height: 18px;
+    align-items: flex-end;
+    transform: translateY(1px);
+  }
+
+  .nav .linkedin {
+    font-size: 21px;
+    line-height: .82;
+  }
+
+  .nav .instagram {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .nav .instagram svg {
+    width: 20px;
+    height: 20px;
+  }
+}
